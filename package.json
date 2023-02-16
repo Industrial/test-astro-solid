@@ -7,11 +7,15 @@
 		"start": "astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
-		"astro": "astro"
+		"astro": "astro",
+		"lint": "pnpm lint:tsc && pnpm lint:eslint",
+		"lint:tsc": "tsc -p . --noEmit",
+		"lint:eslint": "eslint --fix --cache ."
 	},
 	"dependencies": {
 		"@astrojs/solid-js": "^2.0.2",
 		"astro": "^2.0.11",
+		"eslint-config-code9": "^0.1.2",
 		"solid-js": "^1.4.3"
 	}
 }
