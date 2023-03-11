@@ -2,7 +2,7 @@ import type { Argument } from 'classnames'
 import classnames from 'classnames'
 
 export type StyledComponentProps = {
-  classNames: Argument
+  classNames?: Argument
 }
 
 export const styleComponent = ({

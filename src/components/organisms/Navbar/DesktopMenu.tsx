@@ -5,8 +5,6 @@ import { doesHrefMatchPathname, MenuItem } from '../../../services/navigation'
 import { Link } from '../../atoms/Link'
 
 export const DesktopMenu = ({ url, items }: { url: URL; items: Array<MenuItem> }): JSX.Element => {
-  console.log('123')
-
   return (
     <div class="hidden sm:ml-6 sm:block">
       <div class="flex space-x-4">
