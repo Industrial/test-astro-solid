@@ -15,7 +15,7 @@ export const Counter = (): JSX.Element => {
 
   return (
     <div class={styles.Counter}>
-      Test <div class={styles.count}>{count()}</div>
+      <div class={styles.count}>{count()}</div>
     </div>
   )
 }
