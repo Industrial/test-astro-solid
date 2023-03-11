@@ -6,6 +6,7 @@ import { BurgerButton } from './BurgerButton'
 import { DesktopMenu } from './DesktopMenu'
 import { Logo } from './Logo'
 import { MobileMenu } from './MobileMenu'
+import { ProfileButton } from './ProfileButton'
 
 // import style from './Navbar.module.css'
 
@@ -27,8 +28,7 @@ export const Navbar = ({ url, menuItems }: { url: URL; menuItems: Array<MenuItem
               <DesktopMenu url={url} items={menuItems} />
             </div>
             <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              {/* <AlertButton />
-            <ProfileButton /> */}
+              <ProfileButton />
             </div>
           </div>
         </div>

@@ -1,7 +1,8 @@
 import { For } from 'solid-js'
 import type { JSX } from 'solid-js/jsx-runtime'
 
-import { doesHrefMatchPathname, MenuItem } from '../../services/navigation'
+import { doesHrefMatchPathname, MenuItem } from '../../../services/navigation'
+import { Link } from '../../atoms/Link'
 
 export const MobileMenu = ({ url, items }: { url: URL; items: Array<MenuItem> }): JSX.Element => {
   return (
@@ -13,23 +14,21 @@ export const MobileMenu = ({ url, items }: { url: URL; items: Array<MenuItem> })
 
             if (selected) {
               return (
-                <a
+                <Link
                   href={item.href}
                   class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
                   aria-current="page"
-                >
-                  {item.label}
-                </a>
+                  label={item.label}
+                />
               )
             }
 
             return (
-              <a
+              <Link
                 href={item.href}
                 class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-              >
-                {item.label}
-              </a>
+                label={item.label}
+              />
             )
           }}
         </For>

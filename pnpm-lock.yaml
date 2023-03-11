@@ -16,6 +16,7 @@ specifiers:
   astro-seo: ^0.7.1
   astro-webmanifest: ^0.5.0
   astrojs-service-worker: ^0.0.9
+  classnames: ^2.3.2
   eslint-config-code9: ^0.3.0
   solid-js: ^1.4.3
   tailwindcss: ^3.2.7
@@ -36,6 +37,7 @@ dependencies:
   astro-seo: 0.7.1
   astro-webmanifest: 0.5.0
   astrojs-service-worker: 0.0.9_astro@2.0.14
+  classnames: 2.3.2
   eslint-config-code9: 0.3.0
   solid-js: 1.6.11
   tailwindcss: 3.2.7
@@ -2813,6 +2815,10 @@ packages:
   /ci-info/3.8.0:
     resolution: {integrity: sha512-eXTggHWSooYhq49F2opQhuHWgzucfF2YgODK4e1566GQs5BIfP30B0oenwBJHfWxAs2fyPB1s7Mg949zLf61Yw==}
     engines: {node: '>=8'}
+    dev: false
+
+  /classnames/2.3.2:
+    resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==}
     dev: false
 
   /clean-css/5.2.0:
