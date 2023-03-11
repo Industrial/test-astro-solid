@@ -26,7 +26,7 @@ export const menuItems: Array<MenuItem> = [
     href: '/projects',
   },
   {
-    label: 'Calendar',
-    href: '/calendar',
+    label: 'Tags',
+    href: '/tags',
   },
 ]
