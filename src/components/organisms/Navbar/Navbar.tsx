@@ -1,20 +1,19 @@
-import { createSignal } from 'solid-js'
 import type { JSX } from 'solid-js/jsx-runtime'
 
-import type { MenuItem } from '../../services/navigation'
+import { useDropdownOnClick } from '../../../hooks/useDropdownOnClick'
+import type { MenuItem } from '../../../services/navigation'
 import { BurgerButton } from './BurgerButton'
 import { DesktopMenu } from './DesktopMenu'
-import { Logo } from './Logo'
 import { MobileMenu } from './MobileMenu'
 import { ProfileButton } from './ProfileButton'
 
 // import style from './Navbar.module.css'
 
 export const Navbar = ({ url, menuItems }: { url: URL; menuItems: Array<MenuItem> }): JSX.Element => {
-  const [isFolded, setIsFolded] = createSignal(false)
+  const { isVisible, toggle } = useDropdownOnClick()
 
   const handleBurgerButtonClick = () => {
-    setIsFolded(!isFolded())
+    toggle()
   }
 
   return (
@@ -24,7 +23,6 @@ export const Navbar = ({ url, menuItems }: { url: URL; menuItems: Array<MenuItem
           <div class="relative flex h-16 items-center justify-between">
             <BurgerButton onClick={handleBurgerButtonClick} />
             <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-              <Logo />
               <DesktopMenu url={url} items={menuItems} />
             </div>
             <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
@@ -33,7 +31,7 @@ export const Navbar = ({ url, menuItems }: { url: URL; menuItems: Array<MenuItem
           </div>
         </div>
 
-        {isFolded() && <MobileMenu url={url} items={menuItems} />}
+        {isVisible() && <MobileMenu url={url} items={menuItems} />}
       </nav>
     </header>
   )

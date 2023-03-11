@@ -3,7 +3,6 @@ import type { JSX } from 'solid-js/jsx-runtime'
 
 import { useDropdownOnClick } from '../../../hooks/useDropdownOnClick'
 import { CogSixToothIcon } from '../../atoms/icons/CogSixTooth'
-import { SignOutIcon } from '../../atoms/icons/SignOut'
 import { UserCircleIcon } from '../../atoms/icons/UserCircle'
 import { Link } from '../../atoms/Link'
 
