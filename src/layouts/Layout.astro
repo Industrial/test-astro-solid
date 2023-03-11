@@ -3,6 +3,7 @@ import { SEO } from 'astro-seo'
 import { Router } from '@solidjs/router'
 
 import { Navbar } from '../components/Navbar'
+import { menuItems } from '../services/navigation';
 
 export interface Props {
   title: string;
@@ -50,7 +51,7 @@ const { title } = props
     <title>{title}</title>
   </head>
   <body>
-    <Navbar url={url} client:load />
+    <Navbar url={url} menuItems={menuItems} client:load />
     <Router>
       <slot />
     </Router>

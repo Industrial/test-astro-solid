@@ -1,10 +1,11 @@
 import { For } from 'solid-js'
 import type { JSX } from 'solid-js/jsx-runtime'
 
-import { doesHrefMatchPathname } from '../../services/navigation'
-import type { MenuItem } from './types'
+import { doesHrefMatchPathname, MenuItem } from '../../services/navigation'
 
 export const DesktopMenu = ({ url, items }: { url: URL; items: Array<MenuItem> }): JSX.Element => {
+  console.log('123')
+
   return (
     <div class="hidden sm:ml-6 sm:block">
       <div class="flex space-x-4">

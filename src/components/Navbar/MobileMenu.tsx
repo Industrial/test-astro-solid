@@ -1,8 +1,7 @@
 import { For } from 'solid-js'
 import type { JSX } from 'solid-js/jsx-runtime'
 
-import { doesHrefMatchPathname } from '../../services/navigation'
-import type { MenuItem } from './types'
+import { doesHrefMatchPathname, MenuItem } from '../../services/navigation'
 
 export const MobileMenu = ({ url, items }: { url: URL; items: Array<MenuItem> }): JSX.Element => {
   return (
