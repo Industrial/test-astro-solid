@@ -2,8 +2,9 @@
 import { SEO } from 'astro-seo'
 import { Router } from '@solidjs/router'
 
+import { App } from '../components/App'
 import { Navbar } from '../components/organisms/Navbar'
-import { menuItems } from '../services/navigation';
+import { menuItems } from '../lib/navigation'
 
 export interface Props {
   title: string;
@@ -51,10 +52,12 @@ const { title } = props
     <title>{title}</title>
   </head>
   <body>
-    <Navbar url={url} menuItems={menuItems} client:load />
-    <Router>
-      <slot />
-    </Router>
+    <App>
+      <Navbar url={url} menuItems={menuItems} client:load />
+      <Router>
+        <slot />
+      </Router>
+    </App>
   </body>
 </html>
 <style is:global>

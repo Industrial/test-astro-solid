@@ -10,6 +10,7 @@ import webManifest from 'astro-webmanifest';
 import { defineConfig } from 'astro/config';
 import critters from "astro-critters";
 import compress from "astro-compress";
+
 const webManifestConfig = webManifest({
   name: 'Your App name',
   icon: 'src/images/your-icon.svg',
@@ -22,5 +23,6 @@ const webManifestConfig = webManifest({
 });
 
 export default defineConfig({
+  output: 'server',
   integrations: [solidJs(), webManifestConfig, sitemap(), image(), mdx(), partytown(), prefetch(), tailwind(), robotsTxt(), critters(), compress()]
 });

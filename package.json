@@ -3,14 +3,15 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
     "astro": "astro",
+    "build": "astro build",
+    "dev": "astro dev",
     "lint": "pnpm lint:tsc && pnpm lint:eslint",
+    "lint:eslint": "eslint --fix --cache .",
     "lint:tsc": "tsc -p . --noEmit",
-    "lint:eslint": "eslint --fix --cache ."
+    "preview": "astro preview",
+    "start": "astro dev",
+    "typesync": "pnpx typesync && pnpm i"
   },
   "dependencies": {
     "@astrojs/image": "^0.15.0",
@@ -21,6 +22,10 @@
     "@astrojs/solid-js": "^2.0.2",
     "@astrojs/tailwind": "^3.0.1",
     "@solidjs/router": "^0.8.0",
+    "@tanstack/react-query": "^4.26.1",
+    "@trpc/client": "^10.15.0",
+    "@trpc/react-query": "^10.15.0",
+    "@trpc/server": "^10.15.0",
     "astro": "^2.0.14",
     "astro-compress": "^1.1.33",
     "astro-critters": "^1.1.29",
@@ -30,7 +35,9 @@
     "astrojs-service-worker": "^0.0.9",
     "classnames": "^2.3.2",
     "eslint-config-code9": "^0.3.0",
+    "react": "^18.2.0",
     "solid-js": "^1.4.3",
-    "tailwindcss": "^3.2.7"
+    "tailwindcss": "^3.2.7",
+    "zod": "^3.21.4"
   }
 }
