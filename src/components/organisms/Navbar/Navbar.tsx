@@ -1,7 +1,7 @@
 import type { JSX } from 'solid-js/jsx-runtime'
 
 import { useDropdownOnClick } from '../../../hooks/useDropdownOnClick'
-import type { MenuItem } from '../../../services/navigation'
+import type { MenuItem } from '../../../lib/navigation'
 import { BurgerButton } from './BurgerButton'
 import { DesktopMenu } from './DesktopMenu'
 import { MobileMenu } from './MobileMenu'

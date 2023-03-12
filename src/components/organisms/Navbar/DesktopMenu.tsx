@@ -1,7 +1,7 @@
 import { For } from 'solid-js'
 import type { JSX } from 'solid-js/jsx-runtime'
 
-import { doesHrefMatchPathname, MenuItem } from '../../../services/navigation'
+import { doesHrefMatchPathname, MenuItem } from '../../../lib/navigation'
 import { Link } from '../../atoms/Link'
 
 export const DesktopMenu = ({ url, items }: { url: URL; items: Array<MenuItem> }): JSX.Element => {
